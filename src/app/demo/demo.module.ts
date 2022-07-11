@@ -10,7 +10,6 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { FlexboxComponent } from './flexbox/flexbox.component';
 
 
-
 @NgModule({
   declarations: [
     ButtonsComponent,
