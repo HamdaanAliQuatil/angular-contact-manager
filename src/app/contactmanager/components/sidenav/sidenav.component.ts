@@ -1,3 +1,5 @@
+import { state } from '@angular/animations';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  public isScreenSmall: boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+    this.breakpointObserver.observe(['(min-width: 720px)']).subscribe((state: BreakpointState) => {
+      this.isScreenSmall = state.matches;
+    })
   }
 
 }
