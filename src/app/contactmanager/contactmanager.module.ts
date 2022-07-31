@@ -18,7 +18,7 @@ const routes: Routes = [
     children: [
       { path: ':id', component: MainContentComponent },
       { path: '', component: MainContentComponent },
-      { path: '**', redirectTo: '' }
+      // { path: '**', redirectTo: '' }
     ] 
   },
   { path: '**', redirectTo: '' }
