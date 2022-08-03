@@ -22,7 +22,7 @@ export class MainContentComponent implements OnInit {
       if (id) {
         id = 1;
       }
-      this.user = null;
+      // this.user = null;
 
       this.service.users.subscribe(users => {
         if(users.length == 0) return;
